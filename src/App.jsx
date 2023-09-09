@@ -19,10 +19,12 @@ const tabData = [
 ];
 
 function App() {
-  const tabActive = 1;
-function handelActiveTab(id){
-  console.log({id});
-}
+  const [tabActive, setTabActive] = useState(1);
+  // const tabActive = 1;
+
+  function handelActiveTab(id) {
+   setTabActive(id)
+  }
 
   return (
     <div className="tab">
@@ -35,11 +37,10 @@ function handelActiveTab(id){
             onMouseDown={function () {
               return console.log(`mouse Down ${t.id}`);
             }}
-            onClick={()=>handelActiveTab(t.id)}
+            onClick={() => handelActiveTab(t.id)}
           >
             <span>{t.title}</span>
             <span className="tab-indicator"></span>
-            
           </button>
         ))}
       </div>
