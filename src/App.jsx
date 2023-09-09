@@ -20,10 +20,13 @@ const tabData = [
 
 function App() {
   const [tabActive, setTabActive] = useState(1);
+  const [user, setUser] = useState({ name: "mohammad" });
   // const tabActive = 1;
 
   function handelActiveTab(id) {
-   setTabActive(id)
+    setTabActive(id);
+    setUser({ name: "Ali", id: id });
+    console.log({ user });
   }
 
   return (
@@ -44,7 +47,9 @@ function App() {
           </button>
         ))}
       </div>
-      <div className="tab__content">{tabData[tabActive - 1].content}</div>
+      <div className="tab__content">
+        {tabData[tabActive - 1].content} __ {user.name}--{user.id}
+      </div>
     </div>
   );
 }
