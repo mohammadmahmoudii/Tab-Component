@@ -18,3 +18,19 @@ button {
   background: none;
   font-size: 1rem;
 }
+.btn
+{
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: rgb(70, 70, 194);
+  color: beige;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.btnC
+{
+  text-align: left;
+}
